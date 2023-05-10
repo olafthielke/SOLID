@@ -5,7 +5,7 @@ namespace SOLID.DIP.Identifier.Compliant
     public class Customer
     {
         public Guid OrgId => CustomerIdentifier.OrgId;
-        public Guid CustomerId => CustomerIdentifier.CustomerId;
+        public Guid? CustomerId => CustomerIdentifier.CustomerId;
         public string CustomerNumber => CustomerIdentifier.CustomerNumber;
         public string FirstName => CustomerDetails.FirstName;
         public string LastName => CustomerDetails.LastName;

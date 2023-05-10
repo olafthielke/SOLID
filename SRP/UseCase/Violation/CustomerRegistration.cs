@@ -1,17 +1,13 @@
-﻿using System;
-
-namespace SOLID.SRP.UseCase.Compliant
+﻿namespace SOLID.SRP.UseCase.Violation
 {
-    public class Customer
+    public class CustomerRegistration
     {
-        public Guid Id { get; }
         public string FirstName { get; }
         public string LastName { get; }
         public string EmailAddress { get; }
 
-        public Customer(Guid id, string firstName, string lastName, string emailAddress)
+        public CustomerRegistration(string firstName, string lastName, string emailAddress)
         {
-            Id = id;
             FirstName = firstName;
             LastName = lastName;
             EmailAddress = emailAddress;

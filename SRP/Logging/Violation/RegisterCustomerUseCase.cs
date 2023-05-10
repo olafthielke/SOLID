@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using SOLID.DIP.UseCase.Exceptions;
+using SOLID.SRP.UseCase.Exceptions;
 
 namespace SOLID.SRP.Logging.Violation
 {

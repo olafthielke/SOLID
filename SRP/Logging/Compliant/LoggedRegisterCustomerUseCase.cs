@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using SOLID.DIP.UseCase.Exceptions;
 
 namespace SOLID.SRP.Logging.Compliant
 {

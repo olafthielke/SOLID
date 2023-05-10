@@ -4,10 +4,16 @@ namespace SOLID.OCP.Parameters.Violation
     {
         void InsertCustomer(string firstName,
             string middleName,
-            string lastName, 
-            int age, 
-            string emailAddress
+            string lastName,
+            string emailAddress,
+            int? age
             // 18 more parameters!
             );
+
+        void InsertCustomer(string firstName,
+            string lastName,
+            string emailAddress
+        // 18 more parameters!
+        );
     }
 }

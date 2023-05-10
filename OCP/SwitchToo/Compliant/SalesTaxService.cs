@@ -1,5 +1,4 @@
-﻿using SOLID.OCP.SwitchToo.Compliant.SalesTaxes;
-using System;
+﻿using System;
 
 namespace SOLID.OCP.SwitchToo.Compliant
 {
@@ -36,14 +35,12 @@ namespace SOLID.OCP.SwitchToo.Compliant
         }
 
 
-        private static ISalesTax GetSalesTax(string country)
+        private ISalesTax GetSalesTax(string country)
         {
-            // TODO: Add Australian GST.
-            var taxSelector = new SalesTaxSelector(new NewZealandGst(), 
-                                                   new UnitedKingdomVat(),
-                                                   new AustaliaGst());
-            var tax = taxSelector.Select(country);
-            return tax;
+            var selector = new SalesTaxSelector(new NewZealandGst(),
+                new UnitedKingdomVat(), new AustraliaGst());
+
+            return selector.Select(country);
         }
     }
 }

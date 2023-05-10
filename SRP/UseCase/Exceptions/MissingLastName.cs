@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SOLID.DIP.UseCase.Exceptions
+namespace SOLID.SRP.UseCase.Exceptions
 {
     public class MissingLastName : Exception
     {

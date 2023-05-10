@@ -1,4 +1,5 @@
-﻿using SOLID.DIP.UseCase;
+﻿using System;
+using SOLID.SRP.UseCase.Exceptions;
 
 namespace SOLID.SRP.UseCase.Compliant
 {
@@ -27,7 +28,7 @@ namespace SOLID.SRP.UseCase.Compliant
 
         public Customer ToCustomer()
         {
-            return new Customer(FirstName, LastName, EmailAddress);
+            return new Customer(Guid.NewGuid(), FirstName, LastName, EmailAddress);
         }
     }
 }

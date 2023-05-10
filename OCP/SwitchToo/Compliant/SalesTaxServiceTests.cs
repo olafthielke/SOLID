@@ -6,8 +6,8 @@ namespace SOLID.OCP.SwitchToo.Compliant
 {
     public class SalesTaxServiceTests
     {
-        // TODO: Add Australian GST.
         [Theory]
+        [InlineData("Australia", "GST", 0.1, 10)]
         [InlineData("New Zealand", "GST", 0.15, 15)]
         [InlineData("United Kingdom", "VAT", 0.20, 20)]
         public void Countries_With_SalesTax_Tests(string country, string taxName, decimal taxRate, decimal taxAmount)
@@ -30,6 +30,22 @@ namespace SOLID.OCP.SwitchToo.Compliant
             VerifyThrowsException(() => salesTaxService.GetSalesTaxRate(country), country);
             VerifyThrowsException(() => salesTaxService.CalcSalesTaxAmount(100, country), country);
             salesTaxService.DoesCountryHaveSalesTax(country).Should().BeFalse();
+        }
+
+        [Fact]
+        public void Given_Uninitialised_SalesTaxSelector_When_Call_Select_For_NZ_Then_Throws_InvalidOperationException()
+        {
+            var selector = new SalesTaxSelector();
+            Action select = () => selector.Select("New Zealand");
+            select.Should().ThrowExactly<InvalidOperationException>()
+                .WithMessage("New Zealand does not have a sales tax.");
+        }
+
+
+        private static SalesTaxSelector SetupSalesTaxSelector()
+        {
+            return new SalesTaxSelector(new NewZealandGst(),
+                new UnitedKingdomVat());
         }
 
         private void VerifyThrowsException(Action action, string country)

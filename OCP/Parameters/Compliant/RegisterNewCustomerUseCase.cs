@@ -13,13 +13,7 @@ namespace SOLID.OCP.Parameters.Compliant
         {
             Validate(registration);
             var customer = registration.ToCustomer();
-
-            // ...
-
             DataAccess.InsertCustomer(customer);
-
-            // ...
-
             return customer;
         }
 

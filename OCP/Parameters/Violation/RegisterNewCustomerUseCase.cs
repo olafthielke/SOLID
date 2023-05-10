@@ -18,9 +18,7 @@ namespace SOLID.OCP.Parameters.Violation
 
             // TODO: Add customer.MiddleName.
             DataAccess.InsertCustomer(customer.FirstName,
-                customer.MiddleName,
                 customer.LastName,
-                customer.Age,
                 customer.EmailAddress
                 // 18 more parameters!
                 );
@@ -34,6 +32,19 @@ namespace SOLID.OCP.Parameters.Violation
         private static void Validate(CustomerRegistration registration)
         {
             // TODO: Validate the CustomerRegistration.
+
+            ValidateIsInactiveStatus();
+        }
+
+
+        private static void ValidateIsActiveStatus()
+        {
+
+        }
+
+        private static void ValidateIsInactiveStatus()
+        {
+
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace SOLID.DIP.UseCase
+﻿using SOLID.DIP.UseCase.Exceptions;
+
+namespace SOLID.DIP.UseCase
 {
     public class CustomerRegistration
     {
