@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SOLID.OCP.CompliantToo
+namespace SOLID.OCP.Switch.CompliantToo
 {
     public class PaymentGatewaySelector : IPaymentGatewaySelector
     {

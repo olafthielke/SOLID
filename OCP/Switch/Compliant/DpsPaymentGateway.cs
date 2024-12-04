@@ -1,4 +1,4 @@
-namespace SOLID.OCP.Compliant
+namespace SOLID.OCP.Switch.Compliant
 {
     public class DpsPaymentGateway : IPaymentGateway
     {

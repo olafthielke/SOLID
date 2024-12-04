@@ -1,11 +1,7 @@
 using System;
 
-namespace SOLID.OCP
+namespace SOLID.OCP.Switch
 {
-    public class UnknownPaymentGateway : Exception
-    {
-        public UnknownPaymentGateway(string paymentGatewayName)
-            : base($"'{paymentGatewayName}' is an unknown payment gateway.")
-            { }
-    }
+    public class UnknownPaymentGateway(string paymentGatewayName)
+        : Exception($"'{paymentGatewayName}' is an unknown payment gateway.");
 }

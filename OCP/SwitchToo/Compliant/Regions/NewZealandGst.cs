@@ -1,4 +1,4 @@
-﻿namespace SOLID.OCP.SwitchToo.Compliant
+﻿namespace SOLID.OCP.SwitchToo.Compliant.Regions
 {
     public class NewZealandGst : ISalesTax
     {

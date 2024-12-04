@@ -8,7 +8,6 @@ namespace SOLID.OCP.SwitchToo.Violation
         {
             switch (country)
             {
-                case "Australia":
                 case "New Zealand":
                     return "GST";
                 case "United Kingdom":
@@ -24,8 +23,6 @@ namespace SOLID.OCP.SwitchToo.Violation
         {
             switch (country)
             {
-                case "Australia":
-                    return 0.1m;
                 case "New Zealand":
                     return 0.15m;
                 case "United Kingdom":
@@ -45,7 +42,6 @@ namespace SOLID.OCP.SwitchToo.Violation
         {
             switch (country)
             {
-                case "Australia":
                 case "New Zealand":
                 case "United Kingdom":
                     return true;

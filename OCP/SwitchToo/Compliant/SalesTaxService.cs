@@ -1,4 +1,4 @@
-﻿using System;
+﻿using SOLID.OCP.SwitchToo.Compliant.Regions;
 
 namespace SOLID.OCP.SwitchToo.Compliant
 {
@@ -37,8 +37,7 @@ namespace SOLID.OCP.SwitchToo.Compliant
 
         private ISalesTax GetSalesTax(string country)
         {
-            var selector = new SalesTaxSelector(new NewZealandGst(),
-                new UnitedKingdomVat(), new AustraliaGst());
+            var selector = new SalesTaxSelector(new NewZealandGst(), new UnitedKingdomVat());
 
             return selector.Select(country);
         }

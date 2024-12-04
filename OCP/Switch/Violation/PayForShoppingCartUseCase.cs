@@ -1,4 +1,4 @@
-namespace SOLID.OCP.Violation
+namespace SOLID.OCP.Switch.Violation
 {
     public class PayForShoppingCartUseCase
     {

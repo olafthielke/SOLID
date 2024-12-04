@@ -1,4 +1,4 @@
-namespace SOLID.OCP
+namespace SOLID.OCP.Switch
 {
     public class CreditCard
     {
